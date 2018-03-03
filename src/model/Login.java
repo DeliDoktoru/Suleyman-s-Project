@@ -18,6 +18,7 @@ public class Login {
 
 		this.adi = adi;
 		this.password = password;
+		//deneme
 	}
 
 	public String getId() {
