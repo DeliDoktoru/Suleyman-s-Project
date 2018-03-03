@@ -41,6 +41,12 @@ public class Login {
 		return password;
 	}
 
+	private void newMethod() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
