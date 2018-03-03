@@ -8,6 +8,7 @@ import javax.persistence.TableGenerator;
 @Entity
 public class Login {
 //asdadasdas
+	//deneme
 	@TableGenerator(name="LOGÝN_GEN")
 	@GeneratedValue(generator="LOGÝN_GEN")
 	private String id;
