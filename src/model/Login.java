@@ -9,6 +9,7 @@ import javax.persistence.TableGenerator;
 public class Login {
 //asdadasdas
 	//deneme
+	//deneme2
 	@TableGenerator(name="LOGÝN_GEN")
 	@GeneratedValue(generator="LOGÝN_GEN")
 	private String id;
