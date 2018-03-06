@@ -22,7 +22,12 @@ import javax.persistence.TableGenerator;
 
 public class Login {
 //asdadasdas
+<<<<<<< HEAD
 	@Id
+=======
+	//deneme
+	//deneme2
+>>>>>>> 10d2252990fac61ecbcf55abf37c9035685851b2
 	@TableGenerator(name="LOGÝN_GEN")
 	@GeneratedValue(generator="LOGÝN_GEN")
 	private String id;
