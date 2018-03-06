@@ -6,12 +6,51 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
 	<title>Login Sayfası2</title>
+	<style>
+        #formdiv {
+      
+            text-align:center;
+            background:gray;
+        }
+        .centred-form {
+         
+         position: absolute;
+         top:250px;
+         left:500px;
+}
+    </style>
+    
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"></meta>
 </h:head>
 <h:body> 
+
+     
+       <p:growl id="grow1" sticky="true" showDetail="true"/>
+         <h:form>
+            <h:panelGrid columns="2" styleClass="centred-form ">
+                <f:facet name="header">Login Form</f:facet>
+                <p:outputLabel value="Kullanıcı Adı:" />
+                <p:inputText value="#{loginBean.name}" required="true" requiredMessage="Kullanıcı Adı Alanını Boş Bırakmayınız..." />
+                <p:outputLabel value="Parola :" />
+                <p:password value="#{loginBean.password}" required="true" requiredMessage="Parola Alanını Boş Bırakmayınız..." />
+              <f:facet name="footer">
+               <p:commandButton value="Giris" action="#{loginBean.login()}" />
+               <p:commandLink  action="kayit.xhtml?faces-redirect=true">
+            	<h:outputText value="Külüp başkanı olmak istiyorum" />
+               </p:commandLink>
+                 </f:facet>
+   
+           
+            </h:panelGrid>
+        
+               
+        </h:form>
+
+
+
+  
  
- <p:inputText  ></p:inputText>
            
 
 </h:body> 

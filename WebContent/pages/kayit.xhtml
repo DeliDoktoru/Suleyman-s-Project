@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Login Sayfası2</title>
+
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"></meta>
+</h:head>
+<h:body> 
+
+       <p:growl id="grow1" sticky="true" showDetail="true"/>
+         <h:form>
+            <h:panelGrid columns="2">
+                <f:facet name="header">Kayıt Form</f:facet>
+                <p:outputLabel value="Adınızı giriniz:" />
+                <p:inputText   value="#{baskanKayitBean.name}" required="true" requiredMessage="Kullanıcı Adı Alanını Boş Bırakmayınız..." />
+                <p:outputLabel value="Soyadınızı giriniz:" />
+                <p:inputText   value="#{baskanKayitBean.surname}" required="true" requiredMessage="Kullanıcı Adı Alanını Boş Bırakmayınız..." />
+                <p:outputLabel  for="phone" value="Telefon :" />
+                 <p:inputMask   id="phone" value="#{baskanKayitBean.tel}" mask="(999) 999-9999"/>
+                <p:outputLabel  value="E-mailinizi giriniz:" />
+                <p:inputText   value="#{baskanKayitBean.email}" required="true" requiredMessage="Kullanıcı Adı Alanını Boş Bırakmayınız..." />
+                
+                 <p:commandButton value="Kaydet" action="#{baskanKayitBean.kaydet()}" />
+                
+                
+            </h:panelGrid>
+        
+               
+        </h:form>
+
+
+
+</h:body> 
+</html>
+
