@@ -10,7 +10,6 @@ import org.primefaces.context.RequestContext;
 
 import dao.LoginDao;
 import dao.LoginDaoImp;
-import query.DataQuery;
 
 
 @ManagedBean
@@ -20,7 +19,7 @@ public class LoginBean {
 	private String name;
 	private String password;
 	
-	private  DataQuery dataQuery=new DataQuery();
+
 	
 	private LoginDao loginDao=new LoginDaoImp(); 
 	
@@ -38,18 +37,7 @@ public class LoginBean {
 	}
 
 	
-	public String loginControl(){
-		if(dataQuery.loginControl(name, password)){
-			
-			return "Anasayfa.xhtml?faces-redirect=true";
-			
-		}
-		RequestContext.getCurrentInstance().update("grow1");
-		FacesContext context=FacesContext.getCurrentInstance();
-		context.addMessage(null, new  FacesMessage(FacesMessage.SEVERITY_ERROR, "Error", "Parolanýz veya Þifreniz Hatalý"));
-		return "";
-	}
-	
+
 	
 	public String login(){
 	if(loginDao.login(name, password)){
@@ -57,6 +45,7 @@ public class LoginBean {
 			return "Anasayfa.xhtml?faces-redirect=true";
 			
 		}
+	
 		RequestContext.getCurrentInstance().update("grow1");
 		FacesContext context=FacesContext.getCurrentInstance();
 		context.addMessage(null, new  FacesMessage(FacesMessage.SEVERITY_ERROR, "Error", "Parolanýz veya Þifreniz Hatalý"));

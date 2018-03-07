@@ -30,15 +30,14 @@
          <h:form>
             <h:panelGrid columns="2" styleClass="centred-form ">
                 <f:facet name="header">Login Form</f:facet>
-                <p:outputLabel value="Kullanıcı Adı:" />
-                <p:inputText value="#{loginBean.name}" required="true" requiredMessage="Kullanıcı Adı Alanını Boş Bırakmayınız..." />
-                <p:outputLabel value="Parola :" />
-                <p:password value="#{loginBean.password}" required="true" requiredMessage="Parola Alanını Boş Bırakmayınız..." />
+                <p:outputLabel value="Adınız" />
+                <p:inputText value="#{kayitBaskan.name}" required="true" requiredMessage="Kullanıcı Adı Alanını Boş Bırakmayınız..." />
+                <p:outputLabel value="SoyAdınız :" />
+               <p:inputText value="#{kayitBaskan.surname}" required="true" requiredMessage="Soy  Ad Alanını Boş Bırakmayınız..." />
+                <p:outputLabel value="Telefonunuz :" />
+               <p:inputText value="#{kayitBaskan.tel}" required="true" requiredMessage="Telefon Alanını Boş Bırakmayınız..." />
               <f:facet name="footer">
-               <p:commandButton value="Giris" action="#{loginBean.login()}" />
-               <p:commandLink  action="baskanKayit.xhtml?faces-redirect=true">
-            	<h:outputText value="Külüp başkanı olmak istiyorum" />
-               </p:commandLink>
+               <p:commandButton value="Giris" action="#{kayitBaskan.kaydet()}" />
                  </f:facet>
    
            
@@ -47,6 +46,10 @@
                
         </h:form>
         
+
+
+
+  
  
            
 

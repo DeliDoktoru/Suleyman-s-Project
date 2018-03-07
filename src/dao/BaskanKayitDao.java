@@ -3,8 +3,7 @@ package dao;
 import model.Baskan;
 
 public interface BaskanKayitDao {
-	
-	public void baskanKayit(Baskan baskan);
-	
 
+	public void  kayit(Baskan baskan);
+	
 }

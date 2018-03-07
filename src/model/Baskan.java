@@ -1,64 +1,57 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.TableGenerator;
+import java.io.Serializable;
+import javax.persistence.*;
+
+
 
 @Entity
-public class Baskan {
+@NamedQuery(name="Baskan.findAll", query="SELECT b FROM Baskan b")
+public class Baskan implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
-	@TableGenerator(name="Baskan_GEN")
-	@GeneratedValue(generator="Baskan_GEN")
 	private int id;
+
 	private String name;
+
 	private String surname;
+
 	private String tel;
-	private String email;
-	
-	
-	
-	public Baskan( String name, String surname, String tel, String email) {
-	
-		this.name = name;
-		this.surname = surname;
-		this.tel = tel;
-		this.email = email;
-	}
+
 	public Baskan() {
-		super();
 	}
+
 	public int getId() {
-		return id;
+		return this.id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getName() {
-		return name;
+		return this.name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getSurname() {
-		return surname;
+		return this.surname;
 	}
+
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
+
 	public String getTel() {
-		return tel;
+		return this.tel;
 	}
+
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
-	
-	
 }
